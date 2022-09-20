@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>yhj-dongbao-mall-parent</artifactId>
+        <groupId>com.yhj</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>yhj-dongbao-service</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>yhj-dongbao-oms</module>
+        <module>yhj-dongbao-pms</module>
+        <module>yhj-dongbao-ums</module>
+        <module>yhj-dongbao-pay</module>
+        <module>yhj-dongbao-cart</module>
+        <module>yhj-dongbao-dictionary</module>
+        <module>yhj-dongbao-cms</module>
+        <module>yhj-dongbao-sms</module>
+    </modules>
+    <properties>
+        <maven.compiler.source>12</maven.compiler.source>
+        <maven.compiler.target>12</maven.compiler.target>
+    </properties>
+
+</project>

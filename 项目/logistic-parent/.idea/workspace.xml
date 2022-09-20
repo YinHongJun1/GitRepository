@@ -47,7 +47,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.44062078" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RebelAgentSelection">
@@ -64,7 +64,7 @@
       <workItem from="1663595677933" duration="3575000" />
       <workItem from="1663599307149" duration="3396000" />
       <workItem from="1663602788047" duration="374000" />
-      <workItem from="1663647082159" duration="1977000" />
+      <workItem from="1663647082159" duration="2548000" />
     </task>
     <task id="LOCAL-00001" summary="羊城货运管理系统">
       <created>1663648625723</created>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="yhj-dongbao-cms-api" />
+        <module name="yhj-dongbao-pms-api" />
+        <module name="yhj-dongbao-manager-web" />
+        <module name="yhj-dongbao-ums-api" />
+        <module name="yhj-dongbao-oms-api" />
+        <module name="yhj-dongbao-portal-web" />
+        <module name="yhj-dongbao-cms" />
+        <module name="yhj-dongbao-pay" />
+        <module name="yhj-dongbao-cart" />
+        <module name="yhj-dongbao-pay-api" />
+        <module name="yhj-dongbao-pms" />
+        <module name="yhj-dongbao-dictionary-api" />
+        <module name="yhj-dongbao-oms" />
+        <module name="yhj-dongbao-common-util" />
+        <module name="yhj-dongbao-sms" />
+        <module name="yhj-dongbao-cart-api" />
+        <module name="yhj-dongbao-sms-api" />
+        <module name="yhj-dongbao-common-base" />
+        <module name="yhj-dongbao-dictionary" />
+        <module name="yhj-dongbao-ums" />
+        <module name="yhj-dongbao-generator" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="yhj-dongbao-cart" options="-parameters" />
+      <module name="yhj-dongbao-cart-api" options="-parameters" />
+      <module name="yhj-dongbao-cms" options="-parameters" />
+      <module name="yhj-dongbao-cms-api" options="-parameters" />
+      <module name="yhj-dongbao-common-base" options="-parameters" />
+      <module name="yhj-dongbao-common-util" options="-parameters" />
+      <module name="yhj-dongbao-dictionary" options="-parameters" />
+      <module name="yhj-dongbao-dictionary-api" options="-parameters" />
+      <module name="yhj-dongbao-generator" options="-parameters" />
+      <module name="yhj-dongbao-oms" options="-parameters" />
+      <module name="yhj-dongbao-oms-api" options="-parameters" />
+      <module name="yhj-dongbao-pay" options="-parameters" />
+      <module name="yhj-dongbao-pay-api" options="-parameters" />
+      <module name="yhj-dongbao-pms" options="-parameters" />
+      <module name="yhj-dongbao-pms-api" options="-parameters" />
+      <module name="yhj-dongbao-portal-web" options="-parameters" />
+      <module name="yhj-dongbao-sms" options="-parameters" />
+      <module name="yhj-dongbao-sms-api" options="-parameters" />
+      <module name="yhj-dongbao-ums" options="-parameters" />
+      <module name="yhj-dongbao-ums-api" options="-parameters" />
+    </option>
+  </component>
+</project>

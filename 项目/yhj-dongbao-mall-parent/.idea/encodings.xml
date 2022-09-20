@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-api/yhj-dongbao-cart-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-api/yhj-dongbao-cms-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-api/yhj-dongbao-dictionary-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-api/yhj-dongbao-oms-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-api/yhj-dongbao-pay-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-api/yhj-dongbao-pms-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-api/yhj-dongbao-sms-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-api/yhj-dongbao-ums-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-application/yhj-dongbao-manager-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-application/yhj-dongbao-manager-web/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-application/yhj-dongbao-portal-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-common/yhj-dongbao-common-base/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-common/yhj-dongbao-common-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-common/yhj-dongbao-common-util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-job/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-service/yhj-dongbao-cart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-service/yhj-dongbao-cms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-service/yhj-dongbao-dictionary/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-service/yhj-dongbao-oms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-service/yhj-dongbao-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-service/yhj-dongbao-pms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-service/yhj-dongbao-sms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yhj-dongbao-service/yhj-dongbao-ums/src/main/java" charset="UTF-8" />
+  </component>
+</project>

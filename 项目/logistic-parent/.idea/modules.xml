@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/logistic-manager/logistic-manager.iml" filepath="$PROJECT_DIR$/logistic-manager/logistic-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistic-manager/logistic-manager-dao/logistic-manager-dao.iml" filepath="$PROJECT_DIR$/logistic-manager/logistic-manager-dao/logistic-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistic-manager/logistic-manager-pojo/logistic-manager-pojo.iml" filepath="$PROJECT_DIR$/logistic-manager/logistic-manager-pojo/logistic-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistic-manager/logistic-manager-service/logistic-manager-service.iml" filepath="$PROJECT_DIR$/logistic-manager/logistic-manager-service/logistic-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistic-manager/logistic-manager-web/logistic-manager-web.iml" filepath="$PROJECT_DIR$/logistic-manager/logistic-manager-web/logistic-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistic-parent.iml" filepath="$PROJECT_DIR$/logistic-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistic_common/logistic_common.iml" filepath="$PROJECT_DIR$/logistic_common/logistic_common.iml" />
+    </modules>
+  </component>
+</project>

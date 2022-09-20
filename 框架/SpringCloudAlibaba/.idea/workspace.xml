@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="202dc240-4c0a-495b-8f7c-59a626d7d037" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../DesignPattern/DesignPattern.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Interview/Interview.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/HttpClientDemo/HttpClientDemo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/HttpClientServer/HttpClientServer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/RMIClientDemo/RMIClientDemo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/RMIServerDemo/RMIServerDemo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/RPCDemo/RPCDemo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/RPCDemo/consumer/consumer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/RPCDemo/pojo/pojo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/RPCDemo/provider/provider.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/RPCDemo/service/service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RPC/ZookeeperClient/ZookeeperClient.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../javaSE/javaSE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mybatisAll/.idea/mybatisAll.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mybatisAll/com.yhj/mybatisTest01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mybatisAll/mybatisTest02/mybatisTest02.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../mybatisAll/mybatisTest03/mybatisTest03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springboot/springboot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nacos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nacos_9001/src/main/java/com/yhj/nacos_9001/controller/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nacos_9001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nacos_9002/src/main/java/com/yhj/nacos_9002/controller/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nacos_9002/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/primary_project/.idea/primary_project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/reggie_take_out/reggie_take_out.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-api/yhj-dongbao-cart-api/yhj-dongbao-cart-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-api/yhj-dongbao-dictionary-api/yhj-dongbao-dictionary-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-api/yhj-dongbao-pms-api/yhj-dongbao-pms-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-application/yhj-dongbao-application.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-application/yhj-dongbao-manager-web/yhj-dongbao-manager-web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-common/yhj-dongbao-common-base/yhj-dongbao-common-base.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-common/yhj-dongbao-common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-generator/yhj-dongbao-generator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-job/yhj-dongbao-job.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-mall-parent.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-service/yhj-dongbao-cart/yhj-dongbao-cart.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-service/yhj-dongbao-dictionary/yhj-dongbao-dictionary.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-service/yhj-dongbao-oms/yhj-dongbao-oms.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-service/yhj-dongbao-pay/yhj-dongbao-pay.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-service/yhj-dongbao-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../项目/yhj-dongbao-mall-parent/yhj-dongbao-service/yhj-dongbao-ums/yhj-dongbao-ums.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../项目/算法体系学习班/out/production/算法体系学习班/class01/Code01_SelectSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../项目/算法体系学习班/out/production/算法体系学习班/class01/Code01_SelectSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../项目/算法体系学习班/out/production/算法体系学习班/class01/Code02_BubbleSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../项目/算法体系学习班/out/production/算法体系学习班/class01/Code02_BubbleSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../项目/算法体系学习班/src/class01/Code02_BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../项目/算法体系学习班/src/class01/Code02_BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../项目/算法体系学习班/算法体系学习班.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../项目/算法体系学习班/算法体系学习班.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/nacos_9001/pom.xml" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/yhj/Working/Web development and web site construction software packages/apache-maven-versions/apache-maven-3.6.1" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\yhj\Working\Web development and web site construction software packages\apache-maven-versions\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="12" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2EwsIHr1bBEl43XDR5ZOKslHj50" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.44062078" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Nacos9001Application">
+    <configuration name="Nacos9001Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="nacos_9001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yhj.nacos_9001.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yhj.nacos_9001.Nacos9001Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nacos9002Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="nacos_9002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yhj.nacos_9002.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yhj.nacos_9002.Nacos9002Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Nacos9001Application" />
+        <item itemvalue="Spring Boot.Nacos9002Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="202dc240-4c0a-495b-8f7c-59a626d7d037" name="Changes" comment="" />
+      <created>1663517961286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663517961286</updated>
+      <workItem from="1663517962488" duration="102000" />
+      <workItem from="1663518100469" duration="2010000" />
+      <workItem from="1663520143430" duration="484000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

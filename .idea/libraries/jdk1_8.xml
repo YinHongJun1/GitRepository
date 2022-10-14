@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jdk1.8">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://D:/yhj/Working/Web development and web site construction software packages/Java_versions/jdk1.8.0_74" />
+    </SOURCES>
+    <jarDirectory url="file://D:/yhj/Working/Web development and web site construction software packages/Java_versions/jdk1.8.0_74" recursive="false" type="SOURCES" />
+  </library>
+</component>

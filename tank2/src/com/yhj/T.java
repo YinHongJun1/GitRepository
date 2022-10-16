@@ -17,11 +17,15 @@ public class T {
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-//                super.windowClosing(e);
+                // super.windowClosing(e);
                 // 关闭窗口
                 System.exit(0);
             }
         });
 
+    }
+    public void paint(Graphics g){
+        System.out.println("paint");
+        g.fillRect(200,200,50,50);
     }
 }

@@ -5,7 +5,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class Main {
-   public static void main(String[] args) {
+   public static void main(String[] args) throws InterruptedException {
 //        // frame就是一个窗口   setVisible(true 设为窗口可见
 //        Frame frame = new Frame();
 //        frame.setVisible(true);
@@ -24,6 +24,11 @@ public class Main {
 //        });
 //
        TankFrame frame = new TankFrame();
+
+       while (true){
+           Thread.sleep(5000);
+           frame.repaint();
+       }
     }
 
 }

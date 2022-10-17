@@ -1,5 +1,7 @@
 package com.yhj;
 
+import com.sun.javafx.scene.traversal.Direction;
+
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -7,11 +9,13 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class TankFrame extends Frame {
-    int x = 200, y = 200;
-    public TankFrame(){
-        setSize(800,800);
+
+    Tank tank = new  Tank(20,20,Dir.DOWN);
+
+    public TankFrame() {
+        setSize(800, 600);
         setResizable(false);
-        setTitle("Tank war");
+        setTitle("tank war");
         setVisible(true);
 
         this.addKeyListener(new MyKeyListener());
@@ -21,80 +25,75 @@ public class TankFrame extends Frame {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
+
         });
     }
 
     @Override
-    public void paint(Graphics g){
-        System.out.println("paint");
-        g.fillRect(x,y,50,50);
-        x += 10;
-//        y += 20;
+    public void paint(Graphics g) {
+        // 将画笔交给坦克类
+       tank.paint(g);
     }
 
-    class MyKeyListener extends KeyAdapter{
 
-        Boolean bL = false;
-        Boolean bU = false;
-        Boolean bR = false;
-        Boolean bD = false;
-        // 系统帮我们调用
-        public void keyPressed(KeyEvent e){
-            // 获得按键
-          int key = e.getKeyCode();
-          switch (key){
-              case KeyEvent.VK_LEFT:
-                  bL = true;
-                  x -= 10;
-                  break;
-              case KeyEvent.VK_UP:
-                  bU = true;
-                  y += 10;
-                  break;
-              case KeyEvent.VK_RIGHT:
-                  bR = true;
-                  x += 10;
-                  break;
-              case KeyEvent.VK_DOWN:
-                  bD = true;
-                  y -= 10;
-                  break;
-              default:
-                  break;
-          }
-//            x += 20;
-//            repaint();
-            System.out.println("key pressed");
-        }
+    class MyKeyListener extends KeyAdapter {
 
-        public void keyReleased(KeyEvent e){
-            // 获得按键
+        boolean bL = false;
+        boolean bU = false;
+        boolean bR = false;
+        boolean bD = false;
+        @Override
+        public void keyPressed(KeyEvent e) {
             int key = e.getKeyCode();
-            switch (key){
+            switch (key) {
                 case KeyEvent.VK_LEFT:
-                    bL = false;
-                    x -= 10;
+                    bL = true;
                     break;
                 case KeyEvent.VK_UP:
-                    bU = false;
-                    y += 10;
+                    bU = true;
                     break;
                 case KeyEvent.VK_RIGHT:
-                    bR = false;
-                    x += 10;
+                    bR = true;
                     break;
                 case KeyEvent.VK_DOWN:
-                    bD = false;
-                    y -= 10;
+                    bD = true;
                     break;
                 default:
                     break;
             }
-            System.out.println("key released");
+
+            setMainTankDir();
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            int key = e.getKeyCode();
+            switch (key) {
+                case KeyEvent.VK_LEFT:
+                    bL = false;
+                    break;
+                case KeyEvent.VK_UP:
+                    bU = false;
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    bR = false;
+                    break;
+                case KeyEvent.VK_DOWN:
+                    bD = false;
+                    break;
+                default:
+                    break;
+            }
+
+            setMainTankDir();
+        }
+
+        private void setMainTankDir() {
+            if(bL) tank.setDir(Dir.LEFT);
+            if(bU) tank.setDir(Dir.UP);
+            if(bR) tank.setDir(Dir.RIGHT);
+            if(bD) tank.setDir(Dir.DOWN);
         }
 
     }
-
-
-
 }

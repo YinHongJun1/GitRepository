@@ -34,13 +34,62 @@ public class TankFrame extends Frame {
 
     class MyKeyListener extends KeyAdapter{
 
+        Boolean bL = false;
+        Boolean bU = false;
+        Boolean bR = false;
+        Boolean bD = false;
+        // 系统帮我们调用
         public void keyPressed(KeyEvent e){
+            // 获得按键
+          int key = e.getKeyCode();
+          switch (key){
+              case KeyEvent.VK_LEFT:
+                  bL = true;
+                  x -= 10;
+                  break;
+              case KeyEvent.VK_UP:
+                  bU = true;
+                  y += 10;
+                  break;
+              case KeyEvent.VK_RIGHT:
+                  bR = true;
+                  x += 10;
+                  break;
+              case KeyEvent.VK_DOWN:
+                  bD = true;
+                  y -= 10;
+                  break;
+              default:
+                  break;
+          }
 //            x += 20;
 //            repaint();
             System.out.println("key pressed");
         }
 
         public void keyReleased(KeyEvent e){
+            // 获得按键
+            int key = e.getKeyCode();
+            switch (key){
+                case KeyEvent.VK_LEFT:
+                    bL = false;
+                    x -= 10;
+                    break;
+                case KeyEvent.VK_UP:
+                    bU = false;
+                    y += 10;
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    bR = false;
+                    x += 10;
+                    break;
+                case KeyEvent.VK_DOWN:
+                    bD = false;
+                    y -= 10;
+                    break;
+                default:
+                    break;
+            }
             System.out.println("key released");
         }
 

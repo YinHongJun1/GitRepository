@@ -10,8 +10,8 @@ import java.awt.event.WindowEvent;
 
 public class TankFrame extends Frame {
 
-    Tank tank = new  Tank(20,20,Dir.DOWN);
-
+    Tank tank = new  Tank(200,200,Dir.DOWN);
+    Bullet bullet = new Bullet(50,50,Dir.DOWN);
     public TankFrame() {
         setSize(800, 600);
         setResizable(false);
@@ -33,6 +33,7 @@ public class TankFrame extends Frame {
     public void paint(Graphics g) {
         // 将画笔交给坦克类
        tank.paint(g);
+       bullet.paint(g);
     }
 
 

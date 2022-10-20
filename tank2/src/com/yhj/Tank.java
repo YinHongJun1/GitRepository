@@ -49,6 +49,8 @@ public class Tank {
         this.dir = dir;
     }
     public void paint(Graphics g) {
+        Color c = g.getColor();
+        c.getGreen();
         g.fillRect(x, y, 50, 50);
         move();
         //x += 10;

@@ -7,11 +7,13 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
 
 public class TankFrame extends Frame {
 
     Tank tank = new  Tank(200,200,Dir.DOWN,this);
-    Bullet bullet = new Bullet(50,50,Dir.DOWN);
+//    Bullet bullet = new Bullet(50,50,Dir.DOWN);
+    ArrayList<Bullet> bullets = new ArrayList<>();
     static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
     public TankFrame() {
@@ -38,7 +40,6 @@ public class TankFrame extends Frame {
         }
         Graphics getOfferScreen = offerScreenImage.getGraphics();
         Color c = getOfferScreen.getColor();
-        System.out.println(c);
         getOfferScreen.setColor(Color.BLUE);
         getOfferScreen.fillRect(0,0,GAME_WIDTH,GAME_HEIGHT);
         getOfferScreen.setColor(c);
@@ -49,9 +50,16 @@ public class TankFrame extends Frame {
 
     @Override
     public void paint(Graphics g) {
+        Color c = g.getColor();
+        g.setColor(Color.RED);
+        g.drawString("子弹的数量："+ bullets.size(), 10, 60);
+        g.setColor(c);
         // 将画笔交给坦克类
        tank.paint(g);
-       bullet.paint(g);
+        for (int i = 0; i < bullets.size(); i++) {
+                bullets.get(i).paint(g);
+        }
+//       bullet.paint(g);
     }
 
 
@@ -67,15 +75,19 @@ public class TankFrame extends Frame {
             switch (key) {
                 case KeyEvent.VK_LEFT:
                     bL = true;
+                    setMainTankDir();
                     break;
                 case KeyEvent.VK_UP:
                     bU = true;
+                    setMainTankDir();
                     break;
                 case KeyEvent.VK_RIGHT:
                     bR = true;
+                    setMainTankDir();
                     break;
                 case KeyEvent.VK_DOWN:
                     bD = true;
+                    setMainTankDir();
                     break;
                 default:
                     break;
@@ -90,15 +102,19 @@ public class TankFrame extends Frame {
             switch (key) {
                 case KeyEvent.VK_LEFT:
                     bL = false;
+                    setMainTankDir();
                     break;
                 case KeyEvent.VK_UP:
                     bU = false;
+                    setMainTankDir();
                     break;
                 case KeyEvent.VK_RIGHT:
                     bR = false;
+                    setMainTankDir();
                     break;
                 case KeyEvent.VK_DOWN:
                     bD = false;
+                    setMainTankDir();
                     break;
                 case KeyEvent.VK_CONTROL:
                     tank.fire();

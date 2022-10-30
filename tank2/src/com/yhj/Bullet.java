@@ -6,10 +6,10 @@ public class Bullet {
 
     private static int x , y ;
     private Dir dir = null;
-    private static final int SPEED = 8;
+    private static final int SPEED = 15;
     private static final int WIDTH = 15, HEIGHT = 15;
 
-    private boolean live = true;
+    public boolean live = true;
     private TankFrame tf = null;
     public Bullet(int x, int y, Dir dir, TankFrame tf){
         this.x = x;

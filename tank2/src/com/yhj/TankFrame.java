@@ -8,15 +8,17 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class TankFrame extends Frame {
 
     Tank tank = new  Tank(200,200,Dir.DOWN,this);
 //    Bullet bullet = new Bullet(50,50,Dir.DOWN);
-    ArrayList<Bullet> bullets = new ArrayList<>();
+    List<Bullet> bullets = new ArrayList<>();
     static final int GAME_WIDTH = 800, GAME_HEIGHT = 600;
 
-    public TankFrame() {
+     public TankFrame() {
         setSize(GAME_WIDTH, GAME_HEIGHT);
         setResizable(false);
         setTitle("tank war");
@@ -40,7 +42,7 @@ public class TankFrame extends Frame {
         }
         Graphics getOfferScreen = offerScreenImage.getGraphics();
         Color c = getOfferScreen.getColor();
-        getOfferScreen.setColor(Color.BLUE);
+        getOfferScreen.setColor(Color.black);
         getOfferScreen.fillRect(0,0,GAME_WIDTH,GAME_HEIGHT);
         getOfferScreen.setColor(c);
         paint(getOfferScreen);
@@ -59,6 +61,11 @@ public class TankFrame extends Frame {
         for (int i = 0; i < bullets.size(); i++) {
                 bullets.get(i).paint(g);
         }
+
+//        for(Iterator<Bullet> it = bullets.iterator(); it.hasNext();){
+//            Bullet b = it.next();
+//            if (!b.live) it.remove();
+//        }
 //       bullet.paint(g);
     }
 
@@ -75,19 +82,15 @@ public class TankFrame extends Frame {
             switch (key) {
                 case KeyEvent.VK_LEFT:
                     bL = true;
-                    setMainTankDir();
                     break;
                 case KeyEvent.VK_UP:
                     bU = true;
-                    setMainTankDir();
                     break;
                 case KeyEvent.VK_RIGHT:
                     bR = true;
-                    setMainTankDir();
                     break;
                 case KeyEvent.VK_DOWN:
-                    bD = true;
-                    setMainTankDir();
+                    bD = true;;
                     break;
                 default:
                     break;

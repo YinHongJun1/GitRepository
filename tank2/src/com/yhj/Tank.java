@@ -50,10 +50,24 @@ public class Tank {
         this.tf = tf;
     }
     public void paint(Graphics g) {
-        Color c = g.getColor();
-        g.setColor(Color.RED);
-        g.fillRect(x, y, 50, 50);
-        g.setColor(c);
+//        Color c = g.getColor();
+//        g.setColor(Color.RED);
+//        g.fillRect(x, y, 50, 50);
+//        g.setColor(c);
+        switch (dir){
+            case LEFT:
+                g.drawImage(ResourceImage.tankL, x, y, null);
+                break;
+            case UP:
+                g.drawImage(ResourceImage.tankU, x, y, null);
+                break;
+            case RIGHT:
+                g.drawImage(ResourceImage.tankR, x, y, null);
+                break;
+            case DOWN:
+                g.drawImage(ResourceImage.tankD, x, y, null);
+                break;
+        }
         move();
         //x += 10;
         //y += 10;

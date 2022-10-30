@@ -24,11 +24,10 @@ public class Main {
 //        });
 //
        TankFrame frame = new TankFrame();
-
-       while (true){
+       while (true) {
            Thread.sleep(50);
            frame.repaint();
        }
-    }
 
+   }
 }

@@ -23,10 +23,24 @@ public class Bullet {
              tf.bullets.remove(this);
         }
 
-        Color color = g.getColor();
-        g.setColor(Color.WHITE);
-        g.fillOval(x, y, WIDTH, HEIGHT);
-        g.setColor(color);
+//        Color color = g.getColor();
+//        g.setColor(Color.WHITE);
+//        g.fillOval(x, y, WIDTH, HEIGHT);
+//        g.setColor(color);
+        switch (dir){
+            case LEFT:
+                g.drawImage(ResourceImage.bulletL, x, y, null);
+                break;
+            case UP:
+                g.drawImage(ResourceImage.bulletU, x, y, null);
+                break;
+            case RIGHT:
+                g.drawImage(ResourceImage.bulletR, x, y, null);
+                break;
+            case DOWN:
+                g.drawImage(ResourceImage.bulletD, x, y, null);
+                break;
+        }
 
         move();
     }

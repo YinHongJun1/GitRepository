@@ -13,10 +13,11 @@ import java.util.List;
 
 public class TankFrame extends Frame {
 
-    Tank tank = new  Tank(200,300,Dir.DOWN,this);
+    Tank tank = new  Tank(200,300,Dir.DOWN,Group.GOOD,this);
 //    Bullet bullet = new Bullet(50,50,Dir.DOWN);
     List<Bullet> bullets = new ArrayList<>();
     List<Tank> tanks = new ArrayList<>();
+    Explode explode = new Explode(100,100,this);
     static final int GAME_WIDTH = 600, GAME_HEIGHT = 600;
 
      public TankFrame() {
@@ -73,6 +74,7 @@ public class TankFrame extends Frame {
             }
         }
 
+        explode.paint(g);
 //        for(Iterator<Bullet> it = bullets.iterator(); it.hasNext();){
 //            Bullet b = it.next();
 //            if (!b.live) it.remove();

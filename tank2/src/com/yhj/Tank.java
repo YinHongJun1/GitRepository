@@ -1,97 +1,110 @@
 package com.yhj;
 
 import java.awt.*;
+import java.util.Random;
 
 public class Tank {
 
-    private  int x, y;
-
+    private static final int SPEED = 1;
+    public static int WIDTH = ResourceManage.tankD.getWidth();
+    public static int HEIGHT = ResourceManage.tankD.getHeight();
+    private Random random = new Random();
+    private int x, y;
     private Dir dir = Dir.DOWN;
-    private static final int SPEED = 5;
-    private boolean moving = false;
-    private TankFrame tf;
+    private boolean moving = true;
+    private TankFrame tf = null;
+    private boolean living = true;
+    private Group group = Group.BAD;
 
-    public boolean isMoving() {
-        return moving;
-    }
-
-    public void setMoving(boolean moving) {
-        this.moving = moving;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public Dir getDir() {
-        return dir;
-    }
-
-    public void setDir(Dir dir) {
-        this.dir = dir;
-    }
-    public Tank(int x, int y, Dir dir,TankFrame tf){
-        super();
-        this.x = x;
-        this.y = y;
-        this.dir = dir;
-        this.tf = tf;
-    }
-    public void paint(Graphics g) {
-//        Color c = g.getColor();
-//        g.setColor(Color.RED);
-//        g.fillRect(x, y, 50, 50);
-//        g.setColor(c);
-        switch (dir){
-            case LEFT:
-                g.drawImage(ResourceImage.tankL, x, y, null);
-                break;
-            case UP:
-                g.drawImage(ResourceImage.tankU, x, y, null);
-                break;
-            case RIGHT:
-                g.drawImage(ResourceImage.tankR, x, y, null);
-                break;
-            case DOWN:
-                g.drawImage(ResourceImage.tankD, x, y, null);
-                break;
+	public Tank(int x, int y, Dir dir, Group group, TankFrame tf) {
+            super();
+            this.x = x;
+            this.y = y;
+            this.dir = dir;
+            this.group = group;
+            this.tf = tf;
         }
-        move();
-        //x += 10;
-        //y += 10;
-    }
-
-    private void move(){
-        if (!moving) return;
-        switch(dir) {
-            case LEFT:
-                x-=SPEED;
-                break;
-            case UP:
-                y-=SPEED;
-                break;
-            case RIGHT:
-                x+=SPEED;
-                break;
-            case DOWN:
-                y+=SPEED;
-                break;
+        public void fire() {
+            int bX = this.x + Tank.WIDTH/2 - Bullet.WIDTH/2;
+            int bY = this.y + Tank.HEIGHT/2 - Bullet.HEIGHT/2;
+            tf.bullets.add(new Bullet(bX, bY, this.dir, this.group, this.tf));
         }
-    }
 
-    public void fire(){
-       tf.bullets.add(new Bullet(this.x,this.y,this.dir,this.tf));
+        public Dir getDir() {
+            return dir;
+        }
+
+        public int getX() {
+            return x;
+        }
+
+        public Group getGroup() {
+            return group;
+        }
+        public void setGroup(Group group) {
+            this.group = group;
+        }
+        public int getY() {
+            return y;
+        }
+        public boolean isMoving() {
+            return moving;
+        }
+        private void move() {
+
+            if(!moving) return ;
+
+            switch (dir) {
+                case LEFT:
+                    x -= SPEED;
+                    break;
+                case UP:
+                    y -= SPEED;
+                    break;
+                case RIGHT:
+                    x += SPEED;
+                    break;
+                case DOWN:
+                    y += SPEED;
+                    break;
+            }
+
+            if(random.nextInt(10) > 8) this.fire();
+        }
+
+        public void paint(Graphics g) {
+            if(!living) tf.tanks.remove(this);
+
+            switch(dir) {
+                case LEFT:
+                    g.drawImage(ResourceManage.tankL, x, y, null);
+                    break;
+                case UP:
+                    g.drawImage(ResourceManage.tankU, x, y, null);
+                    break;
+                case RIGHT:
+                    g.drawImage(ResourceManage.tankR, x, y, null);
+                    break;
+                case DOWN:
+                    g.drawImage(ResourceManage.tankD, x, y, null);
+                    break;
+            }
+            move();
+        }
+        public void setDir(Dir dir) {
+            this.dir = dir;
+        }
+        public void setMoving(boolean moving) {
+            this.moving = moving;
+        }
+        public void setX(int x) {
+            this.x = x;
+        }
+        public void setY(int y) {
+            this.y = y;
+        }
+        public void die() {
+            this.living = false;
+        }
+
     }
-}

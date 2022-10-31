@@ -1,7 +1,5 @@
 package com.yhj;
 
-import com.sun.java.swing.plaf.windows.WindowsGraphicsUtils;
-
 import java.awt.*;
 
 public class Bullet {
@@ -9,15 +7,34 @@ public class Bullet {
     private int x , y ;
     private Dir dir = null;
     private static final int SPEED = 20;
-    public static final int WIDTH = ResourceImage.bulletD.getWidth();
-    public static final int HEIGHT = ResourceImage.bulletD.getHeight();
+    public static final int WIDTH = ResourceManage.bulletD.getWidth();
+    public static final int HEIGHT = ResourceManage.bulletD.getHeight();
 
     private boolean living = true;
     private TankFrame tf = null;
-    public Bullet(int x, int y, Dir dir, TankFrame tf){
+
+    private Group group = Group.BAD;
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
+    public Bullet(int x, int y, Dir dir, TankFrame tf) {
         this.x = x;
         this.y = y;
         this.dir = dir;
+        this.tf = tf;
+    }
+
+    public Bullet(int x, int y, Dir dir, Group group, TankFrame tf){
+        this.x = x;
+        this.y = y;
+        this.dir = dir;
+        this.group = group;
         this.tf = tf;
     }
 
@@ -32,23 +49,20 @@ public class Bullet {
 //        g.setColor(color);
         switch (dir){
             case LEFT:
-                g.drawImage(ResourceImage.bulletL, x, y, null);
+                g.drawImage(ResourceManage.bulletL, x, y, null);
                 break;
             case UP:
-                g.drawImage(ResourceImage.bulletU, x, y, null);
+                g.drawImage(ResourceManage.bulletU, x, y, null);
                 break;
             case RIGHT:
-                g.drawImage(ResourceImage.bulletR, x, y, null);
+                g.drawImage(ResourceManage.bulletR, x, y, null);
                 break;
             case DOWN:
-                g.drawImage(ResourceImage.bulletD, x, y, null);
+                g.drawImage(ResourceManage.bulletD, x, y, null);
                 break;
         }
 
         move();
-    }
-    public boolean isLiving() {
-        return living;
     }
     private void move() {
         switch (dir) {
@@ -65,10 +79,11 @@ public class Bullet {
                 y += SPEED;
                 break;
         }
-        if(x < 0 || y < 0 || x > tf.GAME_WIDTH || y > tf.GAME_HEIGHT) living = false;
+        if(x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) living = false;
     }
 
     public void collideWithTank(Tank tank) {
+        if (this.group == tank.getGroup()) return ;
         Rectangle rect = new Rectangle(this.x, this.y, WIDTH, HEIGHT);
         Rectangle rect2 = new Rectangle(tank.getX(), tank.getY(),Tank.WIDTH,Tank.HEIGHT);
         if (rect.intersects(rect2)){

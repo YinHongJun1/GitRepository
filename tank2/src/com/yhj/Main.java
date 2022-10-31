@@ -24,6 +24,9 @@ public class Main {
 //        });
 //
        TankFrame frame = new TankFrame();
+       for (int i = 0; i < 5; i++) {
+           frame.tanks.add(new Tank(50 + i * 70,200, Dir.DOWN,frame));
+       }
        while (true) {
            Thread.sleep(50);
            frame.repaint();

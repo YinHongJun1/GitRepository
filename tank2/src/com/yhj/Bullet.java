@@ -1,15 +1,18 @@
 package com.yhj;
 
+import com.sun.java.swing.plaf.windows.WindowsGraphicsUtils;
+
 import java.awt.*;
 
 public class Bullet {
 
-    private static int x , y ;
+    private int x , y ;
     private Dir dir = null;
-    private static final int SPEED = 15;
-    private static final int WIDTH = 15, HEIGHT = 15;
+    private static final int SPEED = 20;
+    public static final int WIDTH = ResourceImage.bulletD.getWidth();
+    public static final int HEIGHT = ResourceImage.bulletD.getHeight();
 
-    public boolean live = true;
+    private boolean living = true;
     private TankFrame tf = null;
     public Bullet(int x, int y, Dir dir, TankFrame tf){
         this.x = x;
@@ -19,7 +22,7 @@ public class Bullet {
     }
 
     public void paint(Graphics g){
-        if (!live){
+        if (!living){
              tf.bullets.remove(this);
         }
 
@@ -44,23 +47,37 @@ public class Bullet {
 
         move();
     }
-
-    private void move(){
-        switch(dir) {
+    public boolean isLiving() {
+        return living;
+    }
+    private void move() {
+        switch (dir) {
             case LEFT:
-                x-=SPEED;
+                x -= SPEED;
                 break;
             case UP:
-                y-=SPEED;
+                y -= SPEED;
                 break;
             case RIGHT:
-                x+=SPEED;
+                x += SPEED;
                 break;
             case DOWN:
-                y+=SPEED;
+                y += SPEED;
                 break;
         }
+        if(x < 0 || y < 0 || x > tf.GAME_WIDTH || y > tf.GAME_HEIGHT) living = false;
+    }
 
-        if (x < 0 || y < 0 || x > TankFrame.GAME_WIDTH || y > TankFrame.GAME_HEIGHT) live = false;
+    public void collideWithTank(Tank tank) {
+        Rectangle rect = new Rectangle(this.x, this.y, WIDTH, HEIGHT);
+        Rectangle rect2 = new Rectangle(tank.getX(), tank.getY(),Tank.WIDTH,Tank.HEIGHT);
+        if (rect.intersects(rect2)){
+                tank.die();
+                this.die();
+        }
+    }
+
+    private void die() {
+        this.living = false;
     }
 }

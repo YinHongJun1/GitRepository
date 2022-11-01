@@ -17,6 +17,7 @@ public class TankFrame extends Frame {
 //    Bullet bullet = new Bullet(50,50,Dir.DOWN);
     List<Bullet> bullets = new ArrayList<>();
     List<Tank> tanks = new ArrayList<>();
+    List<Explode> explodes = new ArrayList<>();
     Explode explode = new Explode(100,100,this);
     static final int GAME_WIDTH = 600, GAME_HEIGHT = 600;
 
@@ -58,6 +59,7 @@ public class TankFrame extends Frame {
         g.setColor(Color.RED);
         g.drawString("子弹的数量："+ bullets.size(), 10, 60);
         g.drawString("敌方坦克的数量："+ tanks.size(), 10, 80);
+        g.drawString("爆炸的数量："+ explodes.size(), 10, 100);
         g.setColor(c);
         // 将画笔交给坦克类
        tank.paint(g);
@@ -67,6 +69,9 @@ public class TankFrame extends Frame {
         for (int i = 0; i < tanks.size(); i++) {
             tanks.get(i).paint(g);
         }
+        for (int i = 0; i < explodes.size(); i++) {
+            explodes.get(i).paint(g);
+        }
 
         for (int i = 0; i < bullets.size(); i++) {
             for (int j = 0; j < tanks.size(); j++) {
@@ -74,7 +79,7 @@ public class TankFrame extends Frame {
             }
         }
 
-        explode.paint(g);
+//        explode.paint(g);
 //        for(Iterator<Bullet> it = bullets.iterator(); it.hasNext();){
 //            Bullet b = it.next();
 //            if (!b.live) it.remove();

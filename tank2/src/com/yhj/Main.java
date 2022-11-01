@@ -1,5 +1,7 @@
 package com.yhj;
 
+import com.sun.xml.internal.ws.api.message.AddressingUtils;
+
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -27,6 +29,8 @@ public class Main {
        for (int i = 0; i < 5; i++) {
            frame.tanks.add(new Tank(50 + i * 70,200, Dir.DOWN,Group.BAD,frame));
        }
+
+       new Thread(()->new Audio("audio/war1.wav").loop()).start();
 
        while (true) {
            Thread.sleep(50);

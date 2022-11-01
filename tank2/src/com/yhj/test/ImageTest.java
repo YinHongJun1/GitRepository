@@ -1,7 +1,11 @@
 package com.yhj.test;
 
+import com.yhj.ResourceManage;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,14 +15,31 @@ import static junit.framework.TestCase.assertNotNull;
 
 public class ImageTest {
     @Test
-    public void test(){
+    void test() {
         try {
-            BufferedImage image = ImageIO.read(new File("E:\\IDEA【马士兵说】\\IDEAWorkspaces\\tank-master\\tank\\src\\images\\0.gif"));
-            assertNotNull(image);
-            BufferedImage images = ImageIO.read(ImageTest.class.getClassLoader().getResourceAsStream("images/bulletD.gif"));
-            assertNotNull(images);
+            BufferedImage tankL = ImageIO.read(ResourceManage.class.getClassLoader().getResourceAsStream("images/tankL.gif"));
+            tankL = rotateImage(tankL, 90);
+            Assertions.assertNotNull(tankL);
         } catch (IOException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+
+    public BufferedImage rotateImage(final BufferedImage bufferedimage,
+                                     final int degree) {
+        int w = bufferedimage.getWidth();
+        int h = bufferedimage.getHeight();
+        int type = bufferedimage.getColorModel().getTransparency();
+        BufferedImage img;
+        Graphics2D graphics2d;
+        (graphics2d = (img = new BufferedImage(w, h, type))
+                .createGraphics()).setRenderingHint(
+                RenderingHints.KEY_INTERPOLATION,
+                RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        graphics2d.rotate(Math.toRadians(degree), w / 2, h / 2);
+        graphics2d.drawImage(bufferedimage, 0, 0, null);
+        graphics2d.dispose();
+        return img;
     }
 }
